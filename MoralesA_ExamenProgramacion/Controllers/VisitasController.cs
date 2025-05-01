@@ -48,7 +48,7 @@ namespace MoralesA_ExamenProgramacion.Controllers
         // GET: Visitas/Create
         public IActionResult Create()
         {
-            ViewData["MascotaId"] = new SelectList(_context.Mascota, "Id", "Id");
+            ViewData["MascotaId"] = new SelectList(_context.Mascota, "Id", "Nombre");
             return View();
         }
 
