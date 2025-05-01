@@ -2,8 +2,24 @@
     ViewData["Title"] = "Home Page";
 }
 
+
 <div class="text-center">
     <h1 class="display-4">Welcome</h1>
     <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 </div>
-/
+
+<img src="/Recursos/meme.jpeg" class="meme-img" />
+
+<input type="text" id="inputTexto" class="form-control mt-3" />
+<button class="btn btn-outline-success btn-lg mt-2" onclick="mostrarAlerta()">
+    Mostrar Alerta
+</button>
+
+@section Scripts {
+    <script>
+        function mostrarAlerta() {
+            var valor = document.getElementById("inputTexto").value;
+            alert("Mi nombre es Anthony Morales, mi curso es Ingenieria en software, mi hobbie es jugar fútbol y el valor del campo de texto es: " + valor);
+        }
+    </script>
+}
