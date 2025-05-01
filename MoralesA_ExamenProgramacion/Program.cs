@@ -1,4 +1,9 @@
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using MoralesA_ExamenProgramacion.Data;
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddDbContext<MoralesA_ExamenProgramacionContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("MoralesA_ExamenProgramacionContext") ?? throw new InvalidOperationException("Connection string 'MoralesA_ExamenProgramacionContext' not found.")));
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
